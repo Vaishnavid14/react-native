@@ -4,7 +4,7 @@
 //import React in our code
 import React from 'react';
 
-//In react border radius is given as height and width are sa,e i.e = 200 and borderRadius = 200/2
+//In react border radius is given as height and width are same i.e = 200 and borderRadius = 200/2
 
 //import all the components we are going to use
 import {
