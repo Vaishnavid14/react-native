@@ -1,6 +1,10 @@
 //Example of onLongPress on TouchableOpacity in React Native
 //https://aboutreact.com/example-of-onlongpress-on-touchableopacity-in-react-native/
 
+
+//to press and long press the same button is add activeOpacity attribute in TouchableOpacity
+
+
 //import React in our code
 import React from 'react';
 
