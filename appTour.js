@@ -20,6 +20,7 @@ const App = (props) => {
     const [secondStepAction, setSecondStepAction] = useState(true);
     const WalkthroughableText = walkthroughable(Text)
     const WalkThroughableImage = walkthroughable(Image)
+    const WalkThroughableButton = walkthroughable(TouchableOpacity)
 
     useEffect(() => {
         props.copilotEvents.on('stepChange', handleStepChange)
@@ -40,7 +41,26 @@ const App = (props) => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.container}>
-
+                <CopilotStep
+                    text="This is at left"
+                    order={4}
+                    name="fourthUniqueKey"
+                >
+                    <WalkthroughableText style={styles.left}>
+                        Text
+                    </WalkthroughableText>
+                </CopilotStep>
+                <CopilotStep
+                    text="This is at right"
+                    order={5}
+                    name="fifthUniqueKey"
+                >
+                    <WalkThroughableButton style={styles.right}>
+                        <TouchableOpacity style={styles.button}>
+                            <Text style={styles.buttontext}>Right</Text>
+                        </TouchableOpacity>
+                    </WalkThroughableButton>
+                </CopilotStep>
                 <CopilotStep
                     text="This is the heading with some style"
                     order={1}
@@ -132,7 +152,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         textAlign: 'center',
         margin: 20,
-        height: 100
+        height: 80
     },
     activeSwitchContainer: {
         flexDirection: 'row',
@@ -146,5 +166,17 @@ const styles = StyleSheet.create({
         height: 140,
         borderRadius: 70,
         marginVertical: 20
+    },
+    left:{
+        position: 'absolute', left: 25,
+            fontSize: 18,
+            margin: 5,
+            height: 40
+    },
+    right: {
+        position: 'absolute', right: 25,
+        fontSize: 18,
+        margin: 5,
+        height: 40
     }
 });
