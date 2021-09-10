@@ -60,6 +60,7 @@ const App = () => {
       }
     };
     requestLocationPermission();
+    //autorefresh
     return () => {
       Geolocation.clearWatch(watchID);
     };
