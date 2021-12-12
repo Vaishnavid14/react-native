@@ -1,5 +1,4 @@
 // Text to Speech Conversion with Natural Voices in React Native
-// https://aboutreact.com/react-native-text-to-speech/
 
 // import React in our code
 import React, { useState, useEffect } from 'react';
